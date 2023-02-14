@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Alerta from "../components/Alerta";
 import clienteAxios from "../config/axios";
+import backgroundImage from '../../public/perrito.jpg'
 
 
 const Login = () => {
@@ -43,15 +44,49 @@ const Login = () => {
     }
   };
 
+  const styles = {
+
+    container: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      height: '100vh',
+    },
+
+    backgroundImage: {
+      backgroundImage: `url(${backgroundImage})`,
+      height: '30vh',
+      width: '30vh',
+      
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPositionX: 'center',
+      transform: 'translate(50%, 10%)',
+      
+      borderRadius: '25%',
+      
+     
+
+    },
+  };
+
+ 
+
   const {msg} = alerta
   
 
   return (
     <>
-        
-          <div>
-            <h1 className="text-indigo-600 font-black text-6xl">Inicia Sesión y Administra tus <span className="text-black">Pacientes</span></h1>
+        <div >
+          <div >
+            
+            <img src="" alt="" />
+            <h1 className="text-teal-500 font-black text-5xl">Inicia Sesión y Administra tus <span className="text-teal-700 text-6xl">Pacientes</span></h1>
+            <h2 className="font-bold uppercase text-teal-900 text-7xl my-5">VETERINARIA KUKA</h2>
+            <img src={backgroundImage} alt="Image" style={styles.backgroundImage} />
           </div>
+        </div>
+        
+          
 
           <div className="mt-20 md:mt-5 shadow-lg px-5 py-10 rounded-xl bg-white">
 
